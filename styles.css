@@ -1,0 +1,205 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header Section */
+.header {
+    background-color: #b71c1c;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Ensures logo and nav links are separated */
+    align-items: center; /* Aligns items vertically in the middle */
+}
+
+.header img {
+    top:100px;
+    max-height: 80px; /* Adjust height to fit well with header */
+    margin-right: 10px; /* Adds small space between logo and text */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-left: 10px; /* Small left margin for balance */
+    display: inline-block; /* Ensure text remains inline */
+    vertical-align: middle; /* Align text vertically with the logo */
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
+}
+
+.nav-links li {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('images/blood1.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #ffebee;
+    color: #b71c1c;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #f44336;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Main Content Section */
+.main-content {
+    padding: 60px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #b71c1c;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #b71c1c;
+    display: inline-block;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.benefits, .eligibility {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.benefits li, .eligibility li {
+    background-color: #b71c1c;
+    color: white;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.3s ease-in-out;
+}
+
+.benefits li:hover, .eligibility li:hover {
+    transform: translateX(5px);
+}
+
+/* Links */
+a {
+    color: #b71c1c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ffebee;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

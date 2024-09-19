@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donor Registration - Wizard Blood Donation</title>
+  <link rel="stylesheet" href="registration.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section class="registration-section">
+    <div class="container">
+      <h2>Donor Registration</h2>
+      <form id="donorForm" action="register.php" method="POST" onsubmit="return validateForm()">
+        
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <!-- Age -->
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" placeholder="Enter your age" min="18" max="65" required>
+        </div>
+
+        <!-- Blood Group -->
+        <div class="form-group">
+          <label for="blood-group">Blood Group:</label>
+          <select id="blood-group" name="blood_group" required>
+            <option value="">Select your blood group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+        </div>
+
+        <!-- Contact Number -->
+        <div class="form-group">
+          <label for="contact">Contact Number:</label>
+          <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" pattern="[0-9]{10}" required>
+        </div>
+
+        <!-- Health Status -->
+        <div class="form-group">
+          <label for="health-status">Health Status:</label>
+          <textarea id="health-status" name="health_status" placeholder="Describe your current health status" rows="4" required></textarea>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Create a password" required minlength="8">
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" required>
+        </div>
+
+        <!-- Register Button -->
+        <button type="submit" class="cta-button">Register as Donor</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="registration.js"></script>
+</body>
+</html>

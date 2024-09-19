@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Camps & Events</title>
+    <link rel="stylesheet" href="Event.css">
+</head>
+<body>
+    <section class="event-section">
+        <div class="container">
+            <h2>Upcoming Blood Donation Camps/Events</h2>
+
+            <!-- Events List -->
+            <div id="eventList">
+                <!-- Example of an event -->
+                <div class="event-item">
+                    <h3>Blood Donation Camp - City Center</h3>
+                    <p>Date: 25th Sept 2024</p>
+                    <p>Location: City Center Plaza</p>
+                    <button onclick="showForm(1)">Register/Volunteer</button>
+                </div>
+
+                <div class="event-item">
+                    <h3>Blood Donation Camp - Riverside Park</h3>
+                    <p>Date: 30th Sept 2024</p>
+                    <p>Location: Riverside Park</p>
+                    <button onclick="showForm(2)">Register/Volunteer</button>
+                </div>
+            </div>
+
+            <!-- Registration/Volunteering Form -->
+            <div id="registrationForm" style="display:none;">
+                <h3>Register or Volunteer</h3>
+                <form id="eventRegistrationForm" action="register_event.php" method="POST">
+                    <input type="hidden" id="event_id" name="event_id">
+                    
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">Contact Number:</label>
+                        <input type="tel" id="contact" name="contact" placeholder="Contact Number" pattern="[0-9]{10}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="volunteer">Would you like to volunteer?</label>
+                        <input type="checkbox" id="volunteer" name="volunteer">
+                    </div>
+
+                    <button type="submit" class="cta-button">Submit</button>
+                    <button type="button" class="cta-button" onclick="hideForm()">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to show the form
+        function showForm(eventId) {
+            document.getElementById('registrationForm').style.display = 'block';
+            document.getElementById('event_id').value = eventId; // Set the event ID in the form
+        }
+
+        // Function to hide the form
+        function hideForm() {
+            document.getElementById('registrationForm').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

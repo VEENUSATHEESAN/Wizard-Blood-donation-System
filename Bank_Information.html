@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Information</title>
+    <link rel="stylesheet" href="Bank_Information.css">
+</head>
+<body>
+    <section class="blood-bank-section">
+        <div class="container">
+            <h2>Blood Bank Information</h2>
+            <!-- Filter Form -->
+            <form id="filterForm">
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter location">
+                </div>
+                <div class="form-group">
+                    <label for="blood-group">Blood Group:</label>
+                    <select id="blood-group" name="blood_group">
+                        <option value="">Select blood group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                </div>
+                <button type="submit" class="filter-btn">Filter</button>
+            </form>
+
+            <!-- Blood Banks List -->
+            <div id="bloodBankList"></div>
+        </div>
+    </section>
+
+    <script src="blood_banks.js"></script>
+</body>
+</html>

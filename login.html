@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donor Login - Wizard Blood Donation</title>
+  <link rel="stylesheet" href="login.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Donor Login</h2>
+    <form action="login.php" method="POST">
+      <div class="form-group">
+        <label for="username">Email or Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <p class="signup-link">Don't have an account? <a href="register.html">Register here</a></p>
+  </div>
+
+</body>
+</html>

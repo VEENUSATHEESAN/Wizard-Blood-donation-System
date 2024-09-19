@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Profile - Wizard Blood Donation</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="profile-section">
+        <div class="container">
+            <h2>Donor Profile</h2>
+
+            <!-- Personal Details -->
+            <div class="personal-details">
+                <h3>Personal Details</h3>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Blood Group:</strong> O+</p>
+                <p><strong>Age:</strong> 28</p>
+                <p><strong>Contact:</strong> 1234567890</p>
+                <p><strong>Health Status:</strong> Good</p>
+                <button onclick="openUpdateForm()">Update Details</button>
+            </div>
+
+            <!-- Donation History -->
+            <div class="donation-history">
+                <h3>Donation History</h3>
+                <ul>
+                    <li>January 15, 2024 - Blood Bank A</li>
+                    <li>April 20, 2024 - Blood Bank B</li>
+                    <li>July 10, 2024 - Blood Bank C</li>
+                </ul>
+            </div>
+
+            <!-- Upcoming Appointments -->
+            <div class="upcoming-appointments">
+                <h3>Upcoming Donation Appointments</h3>
+                <p>No upcoming appointments</p>
+            </div>
+
+            <!-- Next Donation Eligibility -->
+            <div class="eligibility">
+                <h3>Eligibility for Next Donation</h3>
+                <p>Eligible after: <strong>October 15, 2024</strong></p>
+            </div>
+
+            <!-- Certificates -->
+            <div class="certificates">
+                <h3>Donation Certificates</h3>
+                <ul>
+                    <li><a href="#">View Certificate - January 15, 2024</a></li>
+                    <li><a href="#">View Certificate - April 20, 2024</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Update Form (hidden by default) -->
+        <div class="update-form-container" id="updateForm" style="display:none;">
+            <h3>Update Personal Details</h3>
+            <form action="update_profile.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" value="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact" value="1234567890" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="health_status">Health Status:</label>
+                    <textarea id="health_status" name="health_status" required>Good</textarea>
+                </div>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function openUpdateForm() {
+            document.getElementById('updateForm').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
